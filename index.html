@@ -1,40 +1,290 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<!-- Title of talk:
+Hierarchical Quantum Circuit Representations
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+Abstract:
+Quantum circuit algorithms often require architectural design choices analogous to those made in constructing neural and tensor networks. These tend to be hierarchical, modular and exhibit repeating patterns. Neural Architecture Search (NAS) attempts to automate neural network design through learning network architecture and achieves state-of-the-art performance. We propose a framework for representing quantum circuit architectures using techniques from NAS, which enables search space design and architecture search. We use this framework to justify the importance of circuit architecture in quantum machine learning by generating a family of Quantum Convolutional Neural Networks (QCNNs) and evaluating them on a music genre classification dataset, GTZAN. Furthermore, we employ a genetic algorithm to perform Quantum Phase Recognition (QPR) as an example of architecture search with our representation. Finally, we implement the framework as an open-source Python package to enable dynamic circuit creation and facilitate circuit search space design for NAS.
+-->
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<title>hierarqcal</title>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/serif.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/github-dark.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
+
+	<style>
+		h3 {
+			--r-heading-text-transform: None !important;
+		}
+
+		.reveal .slide-number {
+			bottom: 0;
+			right: auto;
+			left: 0;
+		}
+
+		.reveal .fragment.fade-out.visible.dnone {
+			opacity: 0;
+			visibility: hidden;
+			display: none;
+		}
+
+		.flex-container {
+			display: flex !important;
+			flex-direction: column;
+			justify-content: space-between;
+			align-content: space-between;
+			align-items: stretch;
+			height: 100%;
+			/* This will push the first child to the top and the rest to the center */
+			/* text-align: center; */
+			/* This centers the text of all children horizontally */
+		}
+
+		.header {
+			flex-grow: 1;
+			margin-top: .3em;
+			/* align-self: center; */
+		}
+
+		.content {
+			flex-grow: 25;
+			font-size: 0.8em;
+			display: flex !important;
+			flex-direction: row !important;
+			/* flex-wrap: wrap; */
+			align-items: center;
+			/* justify-content: center; */
+			/* align-content: center; */
+		}
+
+		.footer {
+			flex-grow: 2;
+			display: flex;
+			flex-direction: row !important;
+			flex-wrap: wrap;
+			align-items: space-between;
+			justify-content: space-between;
+			align-content: space-between;
+			font-size: 0.3em !important;
+
+		}
+	</style>
+
+	<script>
+		window.addEventListener('load', (event) => {
+			document.querySelectorAll('pre code.hljs.python').forEach((block) => {
+				let codeHtml = block.innerHTML;
+				// Use a regular expression to find and replace the custom class keywords
+				codeHtml = codeHtml.replace(/\b(Qcycle|Qmotif|Qinit|Qmask|Qpermute)\b/g, (match) => {
+					return `<span class="hljs-title class_">${match}</span>`;
+				});
+				block.innerHTML = codeHtml;
 			});
-		</script>
-	</body>
+		});
+
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="header"></div>
+				<div class="content">
+					<img src="./img/2.png" height="200px" />
+					<h3>Hierarchical Quantum Circuit Representations</h3>
+				</div>
+				<div class="footer"></div>
+
+
+				<!-- <img src="./img/mask.svg" width="30%">
+				<img src="./img/cycle.svg" width="30%">
+				<img src="./img/pivot.svg" width="30%">
+				<img src="./img/permute.svg" width="30%"> -->
+
+
+			</section>
+			<section>
+				<section>
+					<h3>Background</h3>
+				</section>
+				<section>
+					Automate everything!
+				</section>
+				<section>
+					Neural Architecture Search (NAS)
+				</section>
+				<section>
+					Ansatz Design
+				</section>
+
+			</section>
+			<section>
+				<section>
+					<h3>Representation</h3>
+				</section>
+				<section>
+					Motifs
+					<img src="./img/motifs.svg" width="100%"></img>
+				</section>
+				<section data-background-iframe="http://localhost:8888/lab" data-background-interactive>
+				</section>
+
+			</section>
+			<section>
+				<section>
+					<h3>Results and Usage</h3>
+				</section>
+				<section>
+					<h4>Music Genre Classification</h4>
+					<img src="./img/TABLE 1_p.svg" width="70%"></img>
+				</section>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Quantum Phase Recognition</h4>
+						<hr />
+					</div>
+
+					<div class="content">
+						<div style="display: flex;flex-direction: column;align-items: flex-start;">
+							<p class="my_text">Cluster-Ising Hamiltonian:</p>
+							<p class="my_text">
+								\[
+								\begin{align}
+								H & = -J\sum_{i=1}^{N-2} Z_iX_{i+1}Z_{i+2} - h_1\sum_{i=1}^{N} X_i - h_2\sum_{i=1}^{N-1}
+								X_iX_{i+1}.\nonumber
+								\end{align}
+								\]
+							</p>
+							<ul class="my_text">
+								<li>Open boundary Conditions</li>
+								<li>$\mathbb{Z_2}\times\mathbb{Z_2}$ symmetry-protected topological (SPT) phase $P$
+									<ul>
+										<li>$X_{\text{even(odd)}}=\prod_{i\in\text{even(odd)}}X_i$</li>
+									</ul>
+								</li>
+								<li>Given an unknown ground state $\ket{\psi_g}$, what is the phase?</li>
+							</ul>
+
+						</div>
+
+					</div>
+
+					<div class="footer">
+
+					</div>
+
+				</section>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Quantum Phase Recognition</h4>
+						<hr />
+					</div>
+					<div class="content" style="flex-direction: column!important;">
+						<pre data-id="code-animation" style="font-size: .5em;">
+							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
+									u0 = Qinit(4) + Qpermute(share_weights=False, mapping=Ugm)
+									u1 = Qcycle(1,3,2, mapping=u0, boundary="open", edge_order=[1,3,2,4])
+									u2 = sum([Qcycle(1,3,offset, mapping=Ugm, boundary="open") for offset in range(3)])
+									u3 = Qmask("101",1,3,0, mapping=Vgm, boundary="open")
+									u4 = Qcycle(1, mapping=Ugm, boundary="open")
+									motif = Qinit(15) + u1 + u2 + u3 + u4
+							</code>
+						</pre>
+						<img src="./img/cong_circuit.svg" style="flex-grow: 1;"></img>
+
+					</div>
+					<div class="footer">
+						<!-- <p>Footer</p>
+						<hr /> -->
+					</div>
+				</section>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Quantum Phase Recognition</h4>
+						<hr />
+					</div>
+					<div class="content"
+						style="flex-wrap: wrap;align-content: center;align-content: center;justify-content: space-between;">
+						<div style="width: 45%;">
+							Reference<sup style="font-size: 11px;"><sup style="font-size: 11px;">1</sup></sup>
+							<div style="display: flex;flex-direction: row;"><img src="./img/spt_cong_transparent.png"></img> $\rightarrow$</div>							
+						</div>
+						<div style="width: 45%;">
+							Found<sup style="font-size: 11px;"><sup style="font-size: 11px;">2</sup></sup>
+							<img src="./img/5_evolve_phase.svg"></img>
+						</div>
+
+						<img src="./img/TABLE 3_p.svg" style="width: 60%;margin-left: auto;margin-right: auto;"></img>
+
+					</div>
+					<div class="footer">
+						<span>$^1$Cong, I., Choi, S. & Lukin, M.D. Quantum convolutional neural networks. Nat. Phys. 15,
+							1273-1278 (2019).</span>
+						<span>$^2$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+
+
+
+				</section>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Variational Quantum Eigensolver</h4>
+						<hr />
+					</div>
+					<div class="content">
+						<p>Content</p>
+					</div>
+					<div class="footer">
+						<p>Footer</p>
+						<hr />
+					</div>
+
+				</section>
+				<section>
+					Shor Example
+				</section>
+				<section>
+					Quantum Fourier Transform
+				</section>
+				<section>
+					Classical Adder
+				</section>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX],
+			slideNumber: "c/t"
+		});
+	</script>
+</body>
+
 </html>
