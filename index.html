@@ -44,34 +44,40 @@ Quantum circuit algorithms often require architectural design choices analogous 
 			flex-direction: column;
 			justify-content: space-between;
 			align-content: space-between;
-			/* This will push the first child to the top and the rest to the center */
+			align-items: stretch;
 			height: 100%;
+			/* This will push the first child to the top and the rest to the center */
 			/* text-align: center; */
 			/* This centers the text of all children horizontally */
 		}
 
-		/* This centers the text in my_text horizontally, it won't affect vertical positioning */
-		.my_text {
-			font-size: 0.8em;
-		}
-
 		.header {
 			flex-grow: 1;
+			margin-top: .3em;
+			/* align-self: center; */
 		}
 
 		.content {
-			flex-grow: 2;
+			flex-grow: 25;
+			font-size: 0.8em;
+			display: flex !important;
+			flex-direction: row !important;
+			/* flex-wrap: wrap; */
+			align-items: center;
+			/* justify-content: center; */
+			/* align-content: center; */
 		}
 
 		.footer {
-			flex-grow: 1;
-		}
+			flex-grow: 2;
+			display: flex;
+			flex-direction: row !important;
+			flex-wrap: wrap;
+			align-items: space-between;
+			justify-content: space-between;
+			align-content: space-between;
+			font-size: 0.3em !important;
 
-		.reveal .slides .footer {
-			position: absolute;
-			bottom: 1em;
-			left: 1em;
-			font-size: 0.5em !important;
 		}
 	</style>
 
@@ -94,10 +100,14 @@ Quantum circuit algorithms often require architectural design choices analogous 
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<div class="flex-container">
+				<div class="header"></div>
+				<div class="content">
 					<img src="./img/2.png" height="200px" />
 					<h3>Hierarchical Quantum Circuit Representations</h3>
 				</div>
+				<div class="footer"></div>
+
+
 				<!-- <img src="./img/mask.svg" width="30%">
 				<img src="./img/cycle.svg" width="30%">
 				<img src="./img/pivot.svg" width="30%">
@@ -176,53 +186,72 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					</div>
 
 				</section>
-				<section class="flex-container" data-transition="none">
+				<section class="flex-container">
 					<div class="header">
 						<h4>Quantum Phase Recognition</h4>
 						<hr />
 					</div>
-					<div class="content">
-						<!-- <div style="display:flex;flex-direction: row;"> -->
-						<pre data-id="code-animation"><code class="hljs python" data-trim data-line-numbers>
-								u0 = Qinit(4) + Qpermute(share_weights=False, mapping=Ugm)
-								u1 = Qcycle(1,3,2, mapping=u0, boundary="open", edge_order=[1,3,2,4])
-								u2 = sum([Qcycle(1,3,offset, mapping=Ugm, boundary="open") for offset in range(3)])
-								u3 = Qmask("101",1,3,0, mapping=Vgm, boundary="open")
-								u4 = Qcycle(1, mapping=Ugm, boundary="open")
-								motif = Qinit(15) + u1 + u2 + u3 + u4
-								
-							</code></pre>
-						<img src="./img/cong_circuit.svg"></img>
-						<!-- <div style="flex-grow: 1;"></div>
-							<img src="./img/TABLE 3_p.svg" style="flex-grow: 2;"></img>
-							<div style="flex-grow: 1;"></div> -->
-						<!-- </div> -->
+					<div class="content" style="flex-direction: column!important;">
+						<pre data-id="code-animation" style="font-size: .5em;">
+							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
+									u0 = Qinit(4) + Qpermute(share_weights=False, mapping=Ugm)
+									u1 = Qcycle(1,3,2, mapping=u0, boundary="open", edge_order=[1,3,2,4])
+									u2 = sum([Qcycle(1,3,offset, mapping=Ugm, boundary="open") for offset in range(3)])
+									u3 = Qmask("101",1,3,0, mapping=Vgm, boundary="open")
+									u4 = Qcycle(1, mapping=Ugm, boundary="open")
+									motif = Qinit(15) + u1 + u2 + u3 + u4
+							</code>
+						</pre>
+						<img src="./img/cong_circuit.svg" style="flex-grow: 1;"></img>
+
 					</div>
-					<div class="footer"></div>
-
-
-
+					<div class="footer">
+						<!-- <p>Footer</p>
+						<hr /> -->
+					</div>
 				</section>
-				<section class="flex-container" data-transition="none">
+				<section class="flex-container">
 					<div class="header">
 						<h4>Quantum Phase Recognition</h4>
 						<hr />
 					</div>
-					<div class="content">
-						<div style="display:flex;flex-direction: row;">
-							<img src="./img/5_evolve_phase.svg" style="flex-grow: 2;"></img>
-							<div style="flex-grow: 1;"></div>
-							<img src="./img/TABLE 3_p.svg" style="flex-grow: 2;"></img>
-							<div style="flex-grow: 1;"></div>
+					<div class="content"
+						style="flex-wrap: wrap;align-content: center;align-content: center;justify-content: space-between;">
+						<div style="width: 45%;">
+							Reference<sup style="font-size: 11px;"><sup style="font-size: 11px;">1</sup></sup>
+							<div style="display: flex;flex-direction: row;"><img src="./img/spt_cong_transparent.png"></img> $\rightarrow$</div>							
 						</div>
+						<div style="width: 45%;">
+							Found<sup style="font-size: 11px;"><sup style="font-size: 11px;">2</sup></sup>
+							<img src="./img/5_evolve_phase.svg"></img>
+						</div>
+
+						<img src="./img/TABLE 3_p.svg" style="width: 60%;margin-left: auto;margin-right: auto;"></img>
+
 					</div>
-					<div class="footer"></div>
+					<div class="footer">
+						<span>$^1$Cong, I., Choi, S. & Lukin, M.D. Quantum convolutional neural networks. Nat. Phys. 15,
+							1273-1278 (2019).</span>
+						<span>$^2$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
 
 
 
 				</section>
-				<section>
-					Variational Quantum Eigensolver
+				<section class="flex-container">
+					<div class="header">
+						<h4>Variational Quantum Eigensolver</h4>
+						<hr />
+					</div>
+					<div class="content">
+						<p>Content</p>
+					</div>
+					<div class="footer">
+						<p>Footer</p>
+						<hr />
+					</div>
+
 				</section>
 				<section>
 					Shor Example
