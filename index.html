@@ -64,7 +64,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 			flex-direction: row !important;
 			/* flex-wrap: wrap; */
 			align-items: center;
-			/* justify-content: center; */
+			justify-content: center;
 			/* align-content: center; */
 		}
 
@@ -99,28 +99,70 @@ Quantum circuit algorithms often require architectural design choices analogous 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
+			<section class="flex-container" data-auto-animate>
 				<div class="header"></div>
 				<div class="content">
-					<img src="./img/2.png" height="200px" />
+					<div style="display: flex;flex-direction: column;">
+						<img src="./img/2.png" height="200px" />
+						<span style="font-size: 0.3em;">A cute robot building itself with artificial intelligence,
+							pencil
+							drawing - DALL·E 2 </span>
+					</div>
 					<h3>Hierarchical Quantum Circuit Representations</h3>
 				</div>
 				<div class="footer"></div>
-
-
-				<!-- <img src="./img/mask.svg" width="30%">
-				<img src="./img/cycle.svg" width="30%">
-				<img src="./img/pivot.svg" width="30%">
-				<img src="./img/permute.svg" width="30%"> -->
-
-
+			</section>
+			<section class="flex-container" data-auto-animate>
+				<div class="header"></div>
+				<div class="content">
+					<div style="display: flex;flex-direction: column;">
+						<img src="./img/2_evolved.png" height="200px" />
+						<span style="font-size: 0.3em;">A cute robot building itself with artificial intelligence,
+							pencil
+							drawing - DALL·E 3 </span>
+					</div>
+					<h3>Hierarchical Quantum Circuit Representations</h3>
+				</div>
+				<div class="footer"></div>
 			</section>
 			<section>
 				<section>
 					<h3>Background</h3>
 				</section>
-				<section>
-					Automate everything!
+				<section class="flex-container">
+					<div class="header">
+						<h4>Automate everything!</h4>
+						<hr />
+					</div>
+					<div class="content" style="justify-content: space-between;">
+						<img src="./img/alexnet.png" width="70%" style="flex: 2 0 auto" />
+						<div style="display: flex;flex-direction: column;flex: 0 1 auto;">
+							<img src="./img/alexnet_result.png"  />
+							<img src="./img/alexnet_arc.png"  />
+						</div>
+
+					</div>
+					<div class="footer" style="justify-content: center;">
+						Krizhevsky, A., Sutskever, I. & Hinton, G. E. Imagenet classification with deep convolutional
+						neural networks. Adv. Neural Inf. Process. Syst. 25 (2012).
+					</div>
+				</section>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Automate everything!</h4>
+						<hr />
+					</div>
+					<div class="content">
+						<img src="./img/manual_feature.png" width="45%" />
+						<div style="display: flex;flex-direction: column;">
+							$\rightarrow$
+							<span>Feature Engineering</span>
+						</div>
+						<img src="./img/automate_feature.png" width="45%" />
+					</div>
+					<div class="footer" style="justify-content: center;">
+						Images Generated with DALL·E 3
+					</div>
 				</section>
 				<section>
 					Neural Architecture Search (NAS)
@@ -146,9 +188,80 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				<section>
 					<h3>Results and Usage</h3>
 				</section>
-				<section>
-					<h4>Music Genre Classification</h4>
-					<img src="./img/TABLE 1_p.svg" width="70%"></img>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Music Genre Classification</h4>
+						<hr />
+					</div>
+					<div class="content" style="align-items:stretch;">
+						<img src="./img/1_qcnn_pipeline.svg"></img>
+					</div>
+					<div class="footer">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Music Genre Classification</h4>
+						<hr />
+					</div>
+					<div class="content" style="align-items: stretch;">
+						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
+							<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim>
+										qcnn = Qinit(8) + (Qcycle(1) + Qmask("*!"))*3
+								</code>
+							</pre>
+							<img src="./img/right.svg"></img>
+						</div>
+						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
+							<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim>
+										qcnn = Qinit(8) + (Qcycle(1) + Qmask("!*"))*3
+								</code>
+							</pre>
+							<img src="./img/left.svg"></img>
+						</div>
+						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
+							<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim>
+										qcnn = Qinit(8) + (Qcycle(1) + Qmask("*!*"))*3
+								</code>
+							</pre>
+							<img src="./img/inside.svg"></img>
+						</div>
+						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
+							<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim>
+										qcnn = Qinit(8) + (Qcycle(1) + Qmask("!*!"))*3
+								</code>
+							</pre>
+							<img src="./img/outside.svg"></img>
+						</div>
+					</div>
+					<div class="footer">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+
+				<section class="flex-container">
+					<div class="header">
+						<h4>Music Genre Classification</h4>
+						<hr />
+					</div>
+					<div class="content">
+						<img src="./img/TABLE 1_p.svg" width="70%"></img>
+						<img src="./img/circ_anz.svg" width="70%"></img>
+						<img src="./img/arcvanz.svg"></img>
+
+
+					</div>
+					<div class="footer">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
 				</section>
 				<section class="flex-container">
 					<div class="header">
@@ -216,17 +329,20 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<hr />
 					</div>
 					<div class="content"
-						style="flex-wrap: wrap;align-content: center;align-content: center;justify-content: space-between;">
+						style="flex-wrap: wrap;align-content: center;align-content: center;justify-content: center;">
 						<div style="width: 45%;">
 							Reference<sup style="font-size: 11px;"><sup style="font-size: 11px;">1</sup></sup>
-							<div style="display: flex;flex-direction: row;"><img src="./img/spt_cong_transparent.png"></img> $\rightarrow$</div>							
+							<img src="./img/spt_cong_transparent.png"></img>
+						</div>
+						<div style="align-self: center;width: 10%;">
+							$\rightarrow$
 						</div>
 						<div style="width: 45%;">
 							Found<sup style="font-size: 11px;"><sup style="font-size: 11px;">2</sup></sup>
 							<img src="./img/5_evolve_phase.svg"></img>
 						</div>
 
-						<img src="./img/TABLE 3_p.svg" style="width: 60%;margin-left: auto;margin-right: auto;"></img>
+						<img src="./img/TABLE 3_p.svg" style="width: 60%;"></img>
 
 					</div>
 					<div class="footer">
@@ -235,26 +351,26 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<span>$^2$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
 							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
-
-
+				</section>
+				<section class="flex-container">
+					<div class="header">
+						<h4>Quantum Phase Recognition</h4>
+						<hr />
+					</div>
+					<div class="content" style="justify-content: center;">
+						<img src="./img/20_evolve_circ.svg"></img>
+					</div>
+					<div class="footer">
+					</div>
 
 				</section>
 				<section class="flex-container">
 					<div class="header">
-						<h4>Variational Quantum Eigensolver</h4>
+						<h4>Shor circuit</h4>
 						<hr />
 					</div>
-					<div class="content">
-						<p>Content</p>
-					</div>
-					<div class="footer">
-						<p>Footer</p>
-						<hr />
-					</div>
-
-				</section>
-				<section>
-					Shor Example
+					<div class="content"></div>
+					<div class="footer"></div>
 				</section>
 				<section>
 					Quantum Fourier Transform
