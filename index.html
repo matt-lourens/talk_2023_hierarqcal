@@ -52,7 +52,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 		}
 
 		.header {
-			flex-grow: 1;
+			flex-grow: 0;
 			margin-top: .3em;
 			/* align-self: center; */
 		}
@@ -65,20 +65,51 @@ Quantum circuit algorithms often require architectural design choices analogous 
 			/* flex-wrap: wrap; */
 			align-items: center;
 			justify-content: center;
+
 			/* align-content: center; */
 		}
 
 		.footer {
-			flex-grow: 2;
+			flex-grow: 0;
 			display: flex;
 			flex-direction: row !important;
 			flex-wrap: wrap;
 			align-items: space-between;
-			justify-content: space-between;
+			justify-content: center;
 			align-content: space-between;
 			font-size: 0.3em !important;
 
 		}
+
+		.sub_content_column {
+			display: flex;
+			flex-direction: column !important;
+			width: 100%;
+			height: 100%;
+			justify-content: flex-start;
+		}
+
+		.sub_content_column_center {
+			display: flex;
+			flex-direction: column !important;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.sub_content_row_center {
+			display: flex;
+			flex-direction: row !important;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* code {
+			padding-bottom: 0em !important;
+		} */
 	</style>
 
 	<script>
@@ -99,11 +130,11 @@ Quantum circuit algorithms often require architectural design choices analogous 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section class="flex-container" data-auto-animate>
+			<section class="flex-container" data-auto-animate data-auto-animate-duration=".4">
 				<div class="header"></div>
 				<div class="content">
-					<div style="display: flex;flex-direction: column;">
-						<img src="./img/2.png" height="200px" />
+					<div style="display: flex; flex-direction: column; align-items: center;">
+						<img src="./img/2.png" width="200px" />
 						<span style="font-size: 0.3em;">A cute robot building itself with artificial intelligence,
 							pencil
 							drawing - DALL·E 2 </span>
@@ -112,11 +143,11 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				</div>
 				<div class="footer"></div>
 			</section>
-			<section class="flex-container" data-auto-animate>
+			<section class="flex-container" data-auto-animate data-auto-animate-duration=".4">
 				<div class="header"></div>
 				<div class="content">
-					<div style="display: flex;flex-direction: column;">
-						<img src="./img/2_evolved.png" height="200px" />
+					<div style="display: flex;flex-direction: column;align-items: center;">
+						<img src="./img/2_evolved.png" width="200px" />
 						<span style="font-size: 0.3em;">A cute robot building itself with artificial intelligence,
 							pencil
 							drawing - DALL·E 3 </span>
@@ -276,7 +307,592 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					Motifs
 					<img src="./img/motifs.svg" width="100%"></img>
 				</section>
-				<section data-background-iframe="http://localhost:8888/lab" data-background-interactive>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1">
+									hierq = Qinit(5)
+									hierq = Qinit(5) + Qcycle(stride=1, step=1, offset=0)
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0)
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/demo_init.svg" width="50%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 1-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(5)
+									hierq = Qinit(5) + Qcycle(stride=1, step=1, offset=0)
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0)
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle1_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle1_circuit.svg" height="50%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 2-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(5) + Qcycle(stride=1, step=1, offset=0)
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0)
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0, boundary="open")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle2_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle2_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 3-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0)
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=2, step=1, offset=0, boundary="open")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle3_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle3_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 4-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qcycle(stride=1, step=1, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=2, step=1, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=3, step=1, offset=0, boundary="open")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle4_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle4_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 5-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qcycle(stride=2, step=1, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=3, step=1, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=1, step=2, offset=0, boundary="open")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle5_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle5_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 6-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qcycle(stride=3, step=1, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=1, step=2, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=1, step=3, offset=0, boundary="open")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle6_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle6_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 7-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qcycle(stride=1, step=2, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=1, step=3, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=1, step=3, offset=1, boundary="open")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle7_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle7_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 8-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qcycle(stride=1, step=3, offset=0, boundary="open")
+									hierq = Qinit(8) + Qcycle(stride=1, step=3, offset=1, boundary="open")
+									hierq = Qinit(8) + Qcycle(1,1,0, mapping = u2)
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_cycle8_motif.svg"></img>
+								<img data-id="img" src="./img/demo_cycle8_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 9-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,2">									
+									hierq = Qinit(8) + Qcycle(1,1,0, mapping = u2)
+									hierq(backend="qiskit")
+									hierq(backend="pennylane")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_cycle9_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- cycle 10-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,3">									
+									hierq = Qinit(8) + Qcycle(1,1,0, mapping = u2)
+									hierq(backend="qiskit")
+									hierq(backend="pennylane")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_cycle10_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- mask 1-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1">									
+									hierq = Qinit(8) + Qmask("10100000")
+									hierq = Qinit(8) + Qmask("1*")
+									hierq = Qinit(8) + Qmask("!00")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_mask1_motif.svg"></img>
+								<img data-id="img" src="./img/demo_mask1_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- mask 2-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">									
+									hierq = Qinit(8) + Qmask("10100000")
+									hierq = Qinit(8) + Qmask("1*")
+									hierq = Qinit(8) + Qmask("!00")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_mask2_motif.svg"></img>
+								<img data-id="img" src="./img/demo_mask2_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- mask 3-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qmask("1*")
+									hierq = Qinit(8) + Qmask("!00")
+									hierq = Qinit(8) + Qmask("!*")
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_mask3_motif.svg"></img>
+								<img data-id="img" src="./img/demo_mask3_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- mask 4-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2">
+									hierq = Qinit(8) + Qmask("1*")
+									hierq = Qinit(8) + Qmask("!00")
+									hierq = Qinit(8) + Qcycle(mapping = u2) + Qmask("*!") + Qcycle(mapping = u2)
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_row_center">
+								<img data-id="img" src="./img/demo_mask4_motif.svg"></img>
+								<img data-id="img" src="./img/demo_mask4_circuit.svg" height="70%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 1-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1">								
+									hierq = Qinit(8) + Qcycle(mapping = u2) + Qmask("*!") + Qcycle(mapping = u2)
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn1_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 2-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,2">								
+									cycle = Qcycle(mapping = u2)
+									hierq = Qinit(8) + cycle + Qmask("*!", mapping=v2) + cycle
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn2_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 3-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,2">								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)
+									hierq = Qinit(8) + cycle_mask
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn3_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 4-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,3">								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)
+									hierq = Qinit(8) + cycle_mask
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn4_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 5-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2,5">
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn5_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 6-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="3,5">
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn6_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate> <!-- qcnn 7-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="4,5">
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column">
+								<img data-id="img" src="./img/demo_qcnn7_circuit.svg" height="60%"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
 				</section>
 
 			</section>
@@ -310,50 +926,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
 				</section>
-				<section class="flex-container" data-auto-animate>
-					<div class="header">
-						<h4>Music Genre Classification</h4>
-						<hr />
-					</div>
-					<div class="content" style="align-items: stretch;">
-						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
-							<pre data-id="code-animation" style="font-size: .5em;">
-								<code class="hljs python" data-trim>
-										qcnn = Qinit(8) + (Qcycle(1) + Qmask("*!"))*3
-								</code>
-							</pre>
-							<img src="./img/right.svg"></img>
-						</div>
-						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
-							<pre data-id="code-animation" style="font-size: .5em;">
-								<code class="hljs python" data-trim>
-										qcnn = Qinit(8) + (Qcycle(1) + Qmask("!*"))*3
-								</code>
-							</pre>
-							<img src="./img/left.svg"></img>
-						</div>
-						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
-							<pre data-id="code-animation" style="font-size: .5em;">
-								<code class="hljs python" data-trim>
-										qcnn = Qinit(8) + (Qcycle(1) + Qmask("*!*"))*3
-								</code>
-							</pre>
-							<img src="./img/inside.svg"></img>
-						</div>
-						<div class="fragment fade-out dnone" style="display: flex;flex-direction: column;width: 70%;">
-							<pre data-id="code-animation" style="font-size: .5em;">
-								<code class="hljs python" data-trim>
-										qcnn = Qinit(8) + (Qcycle(1) + Qmask("!*!"))*3
-								</code>
-							</pre>
-							<img src="./img/outside.svg"></img>
-						</div>
-					</div>
-					<div class="footer">
-						<span>$^1$Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
-							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
-					</div>
-				</section>
+
 
 				<section class="flex-container">
 					<div class="header">
@@ -376,7 +949,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 			<section>
 				<section class="flex-container">
 					<div class="header">
-						<h4>Genetic Algorithm</h4>
+						<h4>Evolutionary Search</h4>
 						<hr />
 					</div>
 					<div class="content">
@@ -935,7 +1508,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 			</section>
 			<section>
 				<section>Classical Adder</section>
-				
+
 				<section class="flex-container">
 					<div class="header">
 						<h4>Classical Adder</h4>
@@ -1013,7 +1586,8 @@ Quantum circuit algorithms often require architectural design choices analogous 
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX],
-			slideNumber: "c/t"
+			slideNumber: "c/t",
+			// disableLayout: true,
 		});
 	</script>
 </body>
