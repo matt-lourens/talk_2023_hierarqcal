@@ -160,32 +160,18 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				<section>
 					<h3>Background</h3>
 				</section>
-
 				<section class="flex-container">
 					<div class="header">
-						<h4>Automate everything!</h4>
-						<hr />
-					</div>
-					<div class="content" style="justify-content: space-between;">
-						<img src="./img/alexnet.png" width="70%" style="flex: 2 0 auto" />
-						<div style="display: flex;flex-direction: column;flex: 0 1 auto;">
-							<img src="./img/alexnet_result.png" />
-							<img src="./img/alexnet_arc.png" />
-						</div>
-
-					</div>
-					<div class="footer" style="justify-content: center;">
-						Krizhevsky, A., Sutskever, I. & Hinton, G. E. Imagenet classification with deep convolutional
-						neural networks. Adv. Neural Inf. Process. Syst. 25 (2012).
-					</div>
-				</section>
-				<section class="flex-container">
-					<div class="header">
-						<h4>Automate everything!</h4>
+						<h4>Neural Networks</h4>
 						<hr />
 					</div>
 					<div class="content">
-						<img src="./img/cat_dog.png" width="50%" />
+						<div class="sub_content_row_center" style="justify-content: space-between!important;">
+							<div style="flex: 2 0 30%;">
+								<img class="fragment" src="./img/cat_dog.png" width="50%" />
+							</div>
+						</div>
+
 					</div>
 					<div class="footer" style="justify-content: center;">
 						Images Generated with DALL·E 3
@@ -193,20 +179,53 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				</section>
 				<section class="flex-container">
 					<div class="header">
-						<h4>Automate everything!</h4>
+						<h4>AlexNet</h4>
+						<hr />
+					</div>
+					<div class="content">
+						<div class="sub_content_row_center">
+							<div style="flex: 7 0 40%;">
+								<img src="./img/alexnet.png" />
+							</div>
+							<div style="flex: 1 0 30%;">
+								<img class="fragment" src="./img/alexnet_result.png" />
+								<img class="fragment" src="./img/alexnet_arc.png" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;">
+						Krizhevsky, A., Sutskever, I. & Hinton, G. E. Imagenet classification with deep convolutional
+						neural networks. Adv. Neural Inf. Process. Syst. 25 (2012).
+					</div>
+				</section>
+
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Automation</h4>
 						<hr />
 					</div>
 					<div class="content">
 						<img src="./img/manual_feature.png" width="45%" />
-						<div class="r-stack" style="display: flex;flex-direction: column;">
-							<div class="fragment dnone fade-out">
-								$\rightarrow$
-								<span>Feature Engineering</span>
-							</div>
-							<div class="fragment" style="display: flex;flex-direction: column;">
-								$\rightarrow$
-								<span>Architecture Engineering?</span>
-							</div>
+						<div class="fragment" style="display: flex;flex-direction: column;">
+							$\rightarrow$
+							<span>Feature Engineering</span>
+						</div>
+						<img class="fragment" src="./img/automate_feature.png" width="45%" />
+					</div>
+					<div class="footer" style="justify-content: center;">
+						Images Generated with DALL·E 3
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Automation</h4>
+						<hr />
+					</div>
+					<div class="content">
+						<img src="./img/manual_feature.png" width="45%" />
+						<div style="display: flex;flex-direction: column;">
+							$\rightarrow$
+							<span>Architecture Engineering?</span>
 						</div>
 						<img src="./img/automate_feature.png" width="45%" />
 					</div>
@@ -214,38 +233,41 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						Images Generated with DALL·E 3
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Neural Architecture Search</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
 					<div class="content">
-						<img src="./img/nas.png" width="85%" />
+						<div class="sub_content_column_center">
+							<img src="./img/nas.png" />
+						</div>
+
 						<!-- Figure 1: Abstract illustration of Neural Architecture Search methods. A search strategy selects an architecture A from a predefined search space A. The architecture is passed to a performance estimation strategy, which returns the estimated performance of A to the search strategy. -->
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div data-id="footer" class="footer" style="justify-content: center;">
 						Elsken, T., Metzen, J. H. & Hutter, F. Neural architecture search: a survey. J. Mach. Learn.
 						Res. 20, 1-21 (2019).
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Neural Architecture Search</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
 					<div class="content">
 						<img src="./img/cell_nas.png" width="50%" />
 						<!-- Figure 2: An illustration of different architecture spaces. Each node in the graphs corresponds to a layer in a neural network, e.g., a convolutional or pooling layer. Different layer types are visualized by different colors. An edge from layer Li to layer Lj denotes that Lj receives the output of Li as input. Left: an element of a chain-structured space. Right: an element of a more complex search space with additional layer types and multiple branches and skip connections. -->
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div data-id="footer" class="footer" style="justify-content: center;">
 						Elsken, T., Metzen, J. H. & Hutter, F. Neural architecture search: a survey. J. Mach. Learn.
 						Res. 20, 1-21 (2019).
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Neural Architecture Search</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
 					<div class="content">
 						<img src="./img/liu_nas.png" width="100%" />
@@ -921,7 +943,10 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				<h3>Results and Usage</h3>
 			</section>
 			<section> <!-- Random Search -->
-				<section class="flex-container">
+				<section data-auto-animate>
+					<h4>Random Search</h4>
+				</section>
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Random Search</h4>
 						<hr />
@@ -930,7 +955,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<div class="sub_content_column">
 							<div>
 								<pre data-id="code-animation" style="font-size: .5em;">
-									<code class="hljs python" data-trim>
+									<code class="hljs python" data-trim data-line-numbers="1,2|1,3|1,4|1,5|1,6|1,8|1-8">
 										# Example Search Space
 										strides = range(1, 8, 1)
 										steps = range(1, 8, 1)
@@ -991,7 +1016,10 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				</section>
 			</section>
 			<section> <!-- Evolutionary Search -->
-				<section class="flex-container" data-auto-animate data-auto-animate-duration="0">
+				<section data-auto-animate>
+					<h4>Evolutionary Search</h4>
+				</section>
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Evolutionary Search</h4> <!-- evolve 1 -->
 						<hr />
@@ -1069,6 +1097,20 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				</section>
 				<section class="flex-container" data-auto-animate data-auto-animate-duration="0">
 					<div class="header">
+						<h4>Tournament Selection</h4> <!-- evolve 4 -->
+						<hr />
+					</div>
+					<div class="content">
+						<img data-id="img" src="./img/evolve4.svg" width="80%"></img>
+					</div>
+					<div class="footer">
+						<span>Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+					</div>
+
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0">
+					<div class="header">
 						<h4>Mutation</h4> <!-- evolve 5 -->
 						<hr />
 					</div>
@@ -1102,24 +1144,26 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					</div>
 
 					<div class="content">
-						<div style="display: flex;flex-direction: column;align-items: flex-start;">
-							<p class="my_text">Cluster-Ising Hamiltonian:</p>
-							<p class="my_text">
+						<div class="sub_content_column">
+							<span style="margin-top: 1em;">Cluster-Ising Hamiltonian:</span>
+							<span style="font-size: .8em;margin-top: 1em;">
 								\[
 								\begin{align}
 								H & = -J\sum_{i=1}^{N-2} Z_iX_{i+1}Z_{i+2} - h_1\sum_{i=1}^{N} X_i - h_2\sum_{i=1}^{N-1}
 								X_iX_{i+1}.\nonumber
 								\end{align}
 								\]
-							</p>
-							<ul class="my_text">
-								<li>Open boundary Conditions</li>
-								<li>$\mathbb{Z_2}\times\mathbb{Z_2}$ symmetry-protected topological (SPT) phase $P$
+							</span>
+							<ul style="font-size: .8em;margin-top: 1em;">
+								<li class="fragment">Open boundary Conditions</li>
+								<li class="fragment">$\mathbb{Z_2}\times\mathbb{Z_2}$ symmetry-protected topological
+									(SPT) phase $P$
 									<ul>
-										<li>$X_{\text{even(odd)}}=\prod_{i\in\text{even(odd)}}X_i$</li>
+										<li class="fragment">$X_{\text{even(odd)}}=\prod_{i\in\text{even(odd)}}X_i$</li>
 									</ul>
 								</li>
-								<li>Given an unknown ground state $\ket{\psi_g}$, what is the phase?</li>
+								<li class="fragment">Given an unknown ground state $\ket{\psi_g}$, what is the phase?
+								</li>
 							</ul>
 
 						</div>
@@ -1136,26 +1180,33 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<h4>Quantum Phase Recognition</h4>
 						<hr />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									u0 = Qinit(4) + Qpermute(share_weights=False, mapping=Ugm)
-									u1 = Qcycle(1,3,2, mapping=u0, boundary="open", edge_order=[1,3,2,4])
-									u2 = sum([Qcycle(1,3,offset, mapping=Ugm, boundary="open") for offset in range(3)])
-									u3 = Qmask("101",1,3,0, mapping=Vgm, boundary="open")
-									u4 = Qcycle(1, mapping=Ugm, boundary="open")
-									motif = Qinit(15) + u1 + u2 + u3 + u4
-							</code>
-						</pre>
-						<img src="./img/cong_circuit.svg" style="flex-grow: 1;"></img>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1|2|3|4|5|6|1-6">
+											u0 = Qinit(4) + Qpermute(share_weights=False, mapping=Ugm)
+											u1 = Qcycle(1,3,2, mapping=u0, boundary="open", edge_order=[1,3,2,4])
+											u2 = sum([Qcycle(1,3,offset, mapping=Ugm, boundary="open") for offset in range(3)])
+											u3 = Qmask("101",1,3,0, mapping=Vgm, boundary="open")
+											u4 = Qcycle(1, mapping=Ugm, boundary="open")
+											motif = Qinit(15) + u1 + u2 + u3 + u4
+										</code>
+									</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img src="./img/cong_circuit.svg" style="flex: 1 1 50%;"></img>
+							</div>
+
+						</div>
 
 					</div>
 					<div class="footer">
-						<!-- <p>Footer</p>
-						<hr /> -->
+						<span>Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Quantum Phase Recognition</h4>
 						<hr />
@@ -1174,7 +1225,7 @@ Quantum circuit algorithms often require architectural design choices analogous 
 							<img src="./img/5_evolve_phase.svg"></img>
 						</div>
 
-						<img src="./img/TABLE 3_p.svg" style="width: 60%;"></img>
+						<img class="fragment" src="./img/TABLE 3_p.svg" style="width: 60%;"></img>
 
 					</div>
 					<div class="footer">
@@ -1184,426 +1235,752 @@ Quantum circuit algorithms often require architectural design choices analogous 
 							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Quantum Phase Recognition</h4>
 						<hr />
 					</div>
-					<div class="content" style="justify-content: center;">
-						<img src="./img/20_evolve_circ.svg"></img>
+					<div class="content">
+						<div class="sub_content_column">
+							<div class="sub_content_row_center">
+								<div style="flex: 0 1 20%;">
+									<span>Found:</span>
+								</div>
+								<img src="./img/20_evolve_circ.svg" style="flex: 1 1 50%"></img>
+							</div>
+
+							<div class="sub_content_column_center">
+								<img src="./img/TABLE 3_p.svg" style="flex: 1 1 50%"></img>
+							</div>
+
+						</div>
+
+
 					</div>
 					<div class="footer">
+						<span>Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
+							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
-
 				</section>
 			</section>
 			<section>
-				<section class="flex-container">
+				<section>
+					<h4>Programming</h4>
+				</section>
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
-						<h4>Shor circuit</h4>
-						<hr />
+						<h4>Shor's Algorithm</h4>
+						<hr data-id="hr" />
 					</div>
 					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 1
-								carry_motif = (
-									Qinit(4)
-									+ Qmotif(E=[(1, 2, 3)], mapping=toffoli)
-									+ Qmotif(E=[(1, 2)], mapping=cnot)
-									+ Qmotif(E=[(0, 2, 3)], mapping=toffoli)
-								)
-
-								# Turn carry into a function to be able to reverse it easily
-								carry = lambda r: carry_motif if r == 1 else carry_motif.reverse()
-							</code>
-						</pre>
-
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(carry(1))
-								</code>
-							</pre>
-						<img src="./img/carry_1.svg" />
+						<div class="sub_content_column">
+							<ul>
+								<li data-id="mod_exp">Modular Exponentiation</li>
+								<li data-id="four">Quantum Fourier Transform</li>
+							</ul>
+						</div>
 
 
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Vedral, V., Barenco, A. & Ekert, A. Quantum networks for elementary arithmetic operations. Phys.
+						Rev. A 54, 147-153 (1996)
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Shor's Algorithm</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content" style="flex-direction: column!important;">
+						<div class="sub_content_column">
+							<ul>
+								<li data-id="mod_exp"> Modular Exponentiation
+									<ul>
+										<li>Ctrl-Mult modulo $N$
+										</li>
+									</ul>
+								</li>
+
+								<li data-id="four">Quantum Fourier Transform</li>
+							</ul>
+						</div>
+
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Vedral, V., Barenco, A. & Ekert, A. Quantum networks for elementary arithmetic operations. Phys.
+						Rev. A 54, 147-153 (1996)
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Shor's Algorithm</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content" style="flex-direction: column!important;">
+						<div class="sub_content_column">
+							<ul>
+								<li data-id="mod_exp"> Modular Exponentiation
+									<ul>
+										<li>Ctrl-Mult modulo $N$
+											<ul>
+												<li>Addition modulo $N$
+
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+								<li data-id="four">Quantum Fourier Transform</li>
+							</ul>
+						</div>
+
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Vedral, V., Barenco, A. & Ekert, A. Quantum networks for elementary arithmetic operations. Phys.
+						Rev. A 54, 147-153 (1996)
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Shor's Algorithm</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content" style="flex-direction: column!important;">
+						<div class="sub_content_column">
+							<ul>
+								<li data-id="mod_exp"> Modular Exponentiation
+									<ul>
+										<li>Ctrl-Mult modulo $N$
+											<ul>
+												<li>Addition modulo $N$
+													<ul>
+														<li>Addition
+
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+								<li data-id="four">Quantum Fourier Transform</li>
+							</ul>
+						</div>
+
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Vedral, V., Barenco, A. & Ekert, A. Quantum networks for elementary arithmetic operations. Phys.
+						Rev. A 54, 147-153 (1996)
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Shor's Algorithm</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content" style="flex-direction: column!important;">
+						<div class="sub_content_column">
+							<ul>
+								<li data-id="mod_exp"> Modular Exponentiation
+									<ul>
+										<li>Ctrl-Mult modulo $N$
+											<ul>
+												<li>Addition modulo $N$
+													<ul>
+														<li>Addition
+															<ul>
+																<li>Carry</li>
+																<li>xor</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+								<li data-id="four">Quantum Fourier Transform</li>
+							</ul>
+						</div>
+
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Vedral, V., Barenco, A. & Ekert, A. Quantum networks for elementary arithmetic operations. Phys.
+						Rev. A 54, 147-153 (1996)
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Shor's Algorithm</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content" style="flex-direction: column!important;">
+						<div class="sub_content_column">
+							<ul>
+								<li data-id="mod_exp"> Modular Exponentiation
+									<ul>
+										<li>Ctrl-Mult modulo $N$
+											<ul>
+												<li>Addition modulo $N$
+													<ul>
+														<li>Addition
+															<ul>
+																<li>Carry
+																	<ul>
+																		<li>cnot</li>
+																		<li>Toffoli</li>
+																	</ul>
+																</li>
+																<li>xor
+																	<ul>
+																		<li>cnot</li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+								<li data-id="four">Quantum Fourier Transform</li>
+							</ul>
+						</div>
+
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Vedral, V., Barenco, A. & Ekert, A. Quantum networks for elementary arithmetic operations. Phys.
+						Rev. A 54, 147-153 (1996)
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 1-->
+					<div class="header">
+						<h4>Shor circuit</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-11">
+										# ====== Motifs level 1
+										carry_motif = (
+											Qinit(4)
+											+ Qmotif(E=[(1, 2, 3)], mapping=toffoli)
+											+ Qmotif(E=[(1, 2)], mapping=cnot)
+											+ Qmotif(E=[(0, 2, 3)], mapping=toffoli)
+										)
+		
+										# Turn carry into a function to be able to reverse it easily
+										carry = lambda r: carry_motif if r == 1 else carry_motif.reverse()
+										plot_circuit(carry(1))
+										plot_circuit(carry(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/carry_1.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 2-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 1
-								carry_motif = (
-									Qinit(4)
-									+ Qmotif(E=[(1, 2, 3)], mapping=toffoli)
-									+ Qmotif(E=[(1, 2)], mapping=cnot)
-									+ Qmotif(E=[(0, 2, 3)], mapping=toffoli)
-								)
-
-								# Turn carry into a function to be able to reverse it easily
-								carry = lambda r: carry_motif if r == 1 else carry_motif.reverse()
-							</code>
-						</pre>
-
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(carry(-1))
-								</code>
-							</pre>
-						<img src="./img/carry_-1.svg" />
-
-
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-10,12">
+										# ====== Motifs level 1
+										carry_motif = (
+											Qinit(4)
+											+ Qmotif(E=[(1, 2, 3)], mapping=toffoli)
+											+ Qmotif(E=[(1, 2)], mapping=cnot)
+											+ Qmotif(E=[(0, 2, 3)], mapping=toffoli)
+										)
+		
+										# Turn carry into a function to be able to reverse it easily
+										carry = lambda r: carry_motif if r == 1 else carry_motif.reverse()
+										plot_circuit(carry(1))
+										plot_circuit(carry(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/carry_-1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 3-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 1
-								sum = lambda r=1: Qinit(3, name=f"sum") + Qpivot(
-									"*1", merge_within="01", mapping=cnot, edge_order=[-1 * r]
-								)
-							</code>
-						</pre>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-6">
+										# ====== Motifs level 1
+										sum = lambda r=1: Qinit(3, name=f"sum") + Qpivot(
+											"*1", merge_within="01", mapping=cnot, edge_order=[-1 * r]
+										)
 
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(sum(1))
-								</code>
-							</pre>
-						<img src="./img/sum_1.svg" />
+										plot_circuit(sum(1))
+										plot_circuit(sum(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/sum_1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 4-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 1
-								sum = lambda r=1: Qinit(3, name=f"sum") + Qpivot(
-									"*1", merge_within="01", mapping=cnot, edge_order=[-1 * r]
-								)
-							</code>
-						</pre>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-5,7">
+										# ====== Motifs level 1
+										sum = lambda r=1: Qinit(3, name=f"sum") + Qpivot(
+											"*1", merge_within="01", mapping=cnot, edge_order=[-1 * r]
+										)
 
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(sum(-1))
-								</code>
-							</pre>
-						<img src="./img/sum_-1.svg" />
+										plot_circuit(sum(1))
+										plot_circuit(sum(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/sum_-1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 5-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 2
-								carry_sum_motif = (
-									lambda r=1: Qinit(4, name=f"crs")
-									+ Qpivot("1*", merge_within="1111", mapping=carry(-r))
-									+ Qpivot("1*", merge_within="111", mapping=sum(r))
-								)
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-10">
+										# ====== Motifs level 2
+										carry_sum_motif = (
+											lambda r=1: Qinit(4, name=f"crs")
+											+ Qpivot("1*", merge_within="1111", mapping=carry(-r))
+											+ Qpivot("1*", merge_within="111", mapping=sum(r))
+										)
+		
+										carry_sum = lambda r=1: carry_sum_motif(1) if r == 1 else carry_sum_motif(-1).reverse()
 
-								carry_sum = lambda r=1: carry_sum_motif(1) if r == 1 else carry_sum_motif(-1).reverse()
-							</code>
-						</pre>
-
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(carry_sum(1))
-								</code>
-							</pre>
-						<img src="./img/carry_sum_1.svg" />
+										plot_circuit(carry_sum(1))
+										plot_circuit(carry_sum(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/carry_sum_1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 6-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 2
-								carry_sum_motif = (
-									lambda r=1: Qinit(4, name=f"crs")
-									+ Qpivot("1*", merge_within="1111", mapping=carry(-r))
-									+ Qpivot("1*", merge_within="111", mapping=sum(r))
-								)
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-9,11">
+										# ====== Motifs level 2
+										carry_sum_motif = (
+											lambda r=1: Qinit(4, name=f"crs")
+											+ Qpivot("1*", merge_within="1111", mapping=carry(-r))
+											+ Qpivot("1*", merge_within="111", mapping=sum(r))
+										)
+		
+										carry_sum = lambda r=1: carry_sum_motif(1) if r == 1 else carry_sum_motif(-1).reverse()
 
-								carry_sum = lambda r=1: carry_sum_motif(1) if r == 1 else carry_sum_motif(-1).reverse()
-							</code>
-						</pre>
-
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(carry_sum(-1))
-								</code>
-							</pre>
-						<img src="./img/carry_sum_-1.svg" />
+										plot_circuit(carry_sum(1))
+										plot_circuit(carry_sum(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/carry_sum_-1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 7-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								cnot_sum_motif = (
-									lambda r=1: Qinit(3, name=f"cns")
-									+ Qpivot("*1", merge_within="11", mapping=cnot)
-									+ Qpivot("*1", merge_within="111", mapping=sum(r))
-								)
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-9">
+										cnot_sum_motif = (
+											lambda r=1: Qinit(3, name=f"cns")
+											+ Qpivot("*1", merge_within="11", mapping=cnot)
+											+ Qpivot("*1", merge_within="111", mapping=sum(r))
+										)
+		
+										cnot_sum = lambda r=1: cnot_sum_motif(1) if r == 1 else cnot_sum_motif(-1).reverse()
 
-								cnot_sum = lambda r=1: cnot_sum_motif(1) if r == 1 else cnot_sum_motif(-1).reverse()
-							</code>
-						</pre>
-
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(cnot_sum(1))
-								</code>
-							</pre>
-						<img src="./img/cnot_sum_1.svg" />
+										plot_circuit(cnot_sum(1))
+										plot_circuit(cnot_sum(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/cnot_sum_1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 8-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								cnot_sum_motif = (
-									lambda r=1: Qinit(3, name=f"cns")
-									+ Qpivot("*1", merge_within="11", mapping=cnot)
-									+ Qpivot("*1", merge_within="111", mapping=sum(r))
-								)
-								
-								cnot_sum = lambda r=1: cnot_sum_motif(1) if r == 1 else cnot_sum_motif(-1).reverse()
-							</code>
-						</pre>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-8,10">
+										cnot_sum_motif = (
+											lambda r=1: Qinit(3, name=f"cns")
+											+ Qpivot("*1", merge_within="11", mapping=cnot)
+											+ Qpivot("*1", merge_within="111", mapping=sum(r))
+										)
+		
+										cnot_sum = lambda r=1: cnot_sum_motif(1) if r == 1 else cnot_sum_motif(-1).reverse()
 
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(cnot_sum(-1))
-								</code>
-							</pre>
-						<img src="./img/cnot_sum_-1.svg" />
+										plot_circuit(cnot_sum(1))
+										plot_circuit(cnot_sum(-1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/cnot_sum_-1.svg" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
-					<div class="header">
-						<h4>Shor circuit</h4>
-						<hr />
-					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# ====== Motifs level 3
-								carry_layer = lambda r=1: Qcycle(
-									1,
-									3,
-									0,
-									mapping=carry(r),
-									boundary="open",
-									edge_order=[r],
-								)
-								plot_circuit(carry_layer_1)
-							</code>
-						</pre>
-						<img src="./img/carry_layer_1.svg" />
-					</div>
-					<div class="footer" style="justify-content: center;">
-						https://github.com/matt-lourens/hierarqcal
-					</div>
-				</section>
-				<section class="flex-container">
-					<div class="header">
-						<h4>Shor circuit</h4>
-						<hr />
-					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								cnot_sum_pivot = lambda r: Qpivot("*10", merge_within="111", mapping=cnot_sum(r))
-							</code>
-						</pre>
 
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(Qinit(6) + cnot_sum_pivot(1))
-								</code>
-							</pre>
-						<img src="./img/cnot_sum_pivot_1.svg" />
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 9-->
+					<div class="header">
+						<h4>Shor circuit</h4>
+						<hr data-id="hr" />
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-8,10">
+										# ====== Motifs level 3
+										carry_layer = lambda r=1: Qcycle(
+											1,
+											3,
+											0,
+											mapping=carry(r),
+											boundary="open",
+											edge_order=[r],
+										)
+										plot_circuit(carry_layer_1)
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/carry_layer_1.svg" width="50%" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 10-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								cnot_sum_pivot = lambda r: Qpivot("*10", merge_within="111", mapping=cnot_sum(r))
-							</code>
-						</pre>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-3">
+										cnot_sum_pivot = lambda r: Qpivot("*10", merge_within="111", mapping=cnot_sum(r))
 
-						<pre style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-									plot_circuit(Qinit(8) + cnot_sum_pivot(1))
-								</code>
-							</pre>
-						<img src="./img/cnot_sum_pivot_18.svg" />
+										plot_circuit(Qinit(6) + cnot_sum_pivot(1))
+										plot_circuit(Qinit(8) + cnot_sum_pivot(1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/cnot_sum_pivot_1.svg" width="70%" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 11-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								carry_sum_layer = lambda r: (
-									Qmask("*111")
-									+ Qcycle(
-										1,
-										3,
-										0,
-										boundary="open",
-										mapping=carry_sum(r),
-										edge_order=[-r],
-									)
-									+ Qunmask("previous")
-								)
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1,4">
+										cnot_sum_pivot = lambda r: Qpivot("*10", merge_within="111", mapping=cnot_sum(r))
 
-								plot_circuit(Qinit(10) + carry_sum_layer(1))
-							</code>
-						</pre>
-						<img src="./img/carry_sum_layer_1.svg" />
+										plot_circuit(Qinit(6) + cnot_sum_pivot(1))
+										plot_circuit(Qinit(8) + cnot_sum_pivot(1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/cnot_sum_pivot_18.svg" width="70%" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 12-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								addition = carry_layer(1) + cnot_sum_pivot(1) + carry_sum_layer(1)
-								subtraction = carry_sum_layer(-1) + cnot_sum_pivot(-1) + carry_layer(-1)
-
-								plot_circuit(Qinit(11) + addition)
-								plot_circuit(Qinit(11) + subtraction)
-							</code>
-						</pre>
-						<img src="./img/addition.svg" />
-						<img src="./img/subtraction.svg" />
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .4em;">
+									<code class="hljs python" data-trim data-line-numbers="">
+										carry_sum_layer = lambda r: (
+											Qmask("*111")
+											+ Qcycle(1,	3, 0,
+												boundary="open",
+												mapping=carry_sum(r),
+												edge_order=[-r],
+											)
+											+ Qunmask("previous")
+										)		
+										plot_circuit(Qinit(10) + carry_sum_layer(1))
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/carry_sum_layer_1.svg" width="55%" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 13-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								addition = carry_layer(1) + cnot_sum_pivot(1) + carry_sum_layer(1)
-								subtraction = carry_sum_layer(-1) + cnot_sum_pivot(-1) + carry_layer(-1)
-
-								plot_circuit(Qinit(13) + addition)
-								plot_circuit(Qinit(13) + subtraction)
-							</code>
-						</pre>
-						<img src="./img/addition13.svg" />
-						<img src="./img/subtraction13.svg" />
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-4">
+										addition = carry_layer(1) + cnot_sum_pivot(1) + carry_sum_layer(1)
+										subtraction = carry_sum_layer(-1) + cnot_sum_pivot(-1) + carry_layer(-1)
+		
+										plot_circuit(Qinit(11) + addition)
+										plot_circuit(Qinit(11) + subtraction)
+										plot_circuit(Qinit(13) + addition)
+										plot_circuit(Qinit(13) + subtraction)
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/addition.svg" width="55%" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 14-->
 					<div class="header">
 						<h4>Shor circuit</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								exp_mod_n = tuple()
-								for k in range(n):
-									exp_mod_n += (
-										Qpivot(mapping=ctrl_mult(a ** (2**k), N, n, ctrl=k, divide=False))
-										+ swap_bx
-										+ Qpivot(mapping=ctrl_mult(a ** (2**k), N, n, ctrl=k, divide=True))
-									)
-								
-								hierq = Qinit(nq, tensors=tensors) + exp_mod_n
-							</code>
-						</pre>
-						<img src="./img/exp_mod_n.svg" />
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-3,5">
+										addition = carry_layer(1) + cnot_sum_pivot(1) + carry_sum_layer(1)
+										subtraction = carry_sum_layer(-1) + cnot_sum_pivot(-1) + carry_layer(-1)
+		
+										plot_circuit(Qinit(11) + addition)
+										plot_circuit(Qinit(11) + subtraction)
+										plot_circuit(Qinit(13) + addition)
+										plot_circuit(Qinit(13) + subtraction)
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/subtraction.svg" width="55%" />
+							</div>
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						https://github.com/matt-lourens/hierarqcal
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 15-->
+					<div class="header">
+						<h4>Shor circuit</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-3,6">
+										addition = carry_layer(1) + cnot_sum_pivot(1) + carry_sum_layer(1)
+										subtraction = carry_sum_layer(-1) + cnot_sum_pivot(-1) + carry_layer(-1)
+		
+										plot_circuit(Qinit(11) + addition)
+										plot_circuit(Qinit(11) + subtraction)
+										plot_circuit(Qinit(13) + addition)
+										plot_circuit(Qinit(13) + subtraction)
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/addition13.svg" width="55%" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						https://github.com/matt-lourens/hierarqcal
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 16-->
+					<div class="header">
+						<h4>Shor circuit</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-3,7">
+										addition = carry_layer(1) + cnot_sum_pivot(1) + carry_sum_layer(1)
+										subtraction = carry_sum_layer(-1) + cnot_sum_pivot(-1) + carry_layer(-1)
+		
+										plot_circuit(Qinit(11) + addition)
+										plot_circuit(Qinit(11) + subtraction)
+										plot_circuit(Qinit(13) + addition)
+										plot_circuit(Qinit(13) + subtraction)
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/subtraction13.svg" width="55%" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						https://github.com/matt-lourens/hierarqcal
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-id="two"> <!-- 17-->
+					<div class="header">
+						<h4>Shor circuit</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="">
+										exp_mod_n = tuple()
+										for k in range(n):
+											exp_mod_n += (
+												Qpivot(mapping=ctrl_mult(a ** (2**k), N, n, ctrl=k, divide=False))
+												+ swap_bx
+												+ Qpivot(mapping=ctrl_mult(a ** (2**k), N, n, ctrl=k, divide=True))
+											)
+										
+										hierq = Qinit(nq, tensors=tensors) + exp_mod_n
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/exp_mod_n.svg" width="55%" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
@@ -1612,97 +1989,153 @@ Quantum circuit algorithms often require architectural design choices analogous 
 				</section>
 				<section class="flex-container">
 					<div class="header">
-						<h4>Shor circuit</h4>
+						<h4>Quantum Fourier Transform</h4>
 						<hr />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-								# QFT circuit
-								n = 4
-								qft = (
-									Qpivot(mapping=Qunitary("h()^0"))
-									+ Qpivot(
-										mapping=Qunitary("cp(x)^01"),
-										share_weights=False,
-										symbol_fn=lambda x, ns, ne: np.pi * 2 ** (-ne),
-									)
-									+ Qmask("1*")
-								) * n
-								qft_n = Qinit(n) + qft
-								
-								circuit_qft = qft_n(backend="qiskit", barriers=False)
-								circuit_qft.draw("mpl")
-							</code>
-						</pre>
-						<img src="./img/qft.svg" />
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1,2|1,4|5-9|10|11|1-15">
+										# QFT circuit
+										n = 4
+										qft = (
+											Qpivot(mapping=Qunitary("h()^0"))
+											+ Qpivot(
+												mapping=Qunitary("cp(x)^01"),
+												share_weights=False,
+												symbol_fn=lambda x, ns, ne: np.pi * 2 ** (-ne),
+											)
+											+ Qmask("1*")
+										) * n
+										qft_n = Qinit(n) + qft
+										
+										circuit_qft = qft_n(backend="qiskit", barriers=False)
+										circuit_qft.draw("mpl")
+									</code>
+								</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img src="./img/qft.svg" width="85%" />
+							</div>
+						</div>
+
 					</div>
 					<div class="footer" style="justify-content: center;">
-						https://github.com/matt-lourens/hierarqcal
+						<!-- https://github.com/matt-lourens/hierarqcal -->
 					</div>
 				</section>
 			</section>
 			<section>
 				<section>Classical Adder</section>
 
-				<section class="flex-container">
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Classical Adder</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="1-7">
+									def half_adder(bits, symbols=None, state=None):
+										b1, b2 = state[bits[0]], state[bits[1]]
+										xor = b1 ^ b2
+										carry = b1 and b2
+										state[bits[0]] = carry
+										state[bits[1]] = xor
+										return state
+									
+									def or_top(bits, symbols=None, state=None):
+										b1, b2 = state[bits[0]], state[bits[1]]
+										state[bits[0]] = b1 or b2
+										return state				
+									</code>
+								</pre>
+							</div>
+						</div>
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						https://github.com/matt-lourens/hierarqcal
+					</div>
+
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Classical Adder</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+									<code class="hljs python" data-trim data-line-numbers="9-12">
+									def half_adder(bits, symbols=None, state=None):
+										b1, b2 = state[bits[0]], state[bits[1]]
+										xor = b1 ^ b2
+										carry = b1 and b2
+										state[bits[0]] = carry
+										state[bits[1]] = xor
+										return state
+									
+									def or_top(bits, symbols=None, state=None):
+										b1, b2 = state[bits[0]], state[bits[1]]
+										state[bits[0]] = b1 or b2
+										return state				
+									</code>
+								</pre>
+							</div>
+						</div>
+
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						https://github.com/matt-lourens/hierarqcal
+					</div>
+
+				</section>
+				<section class="flex-container" data-auto-animate>
 					<div class="header">
 						<h4>Classical Adder</h4>
 						<hr />
 					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">
-							def half_adder(bits, symbols=None, state=None):
-								b1, b2 = state[bits[0]], state[bits[1]]
-								xor = b1 ^ b2
-								carry = b1 and b2
-								state[bits[0]] = carry
-								state[bits[1]] = xor
-								return state
+					<div class="content">
+						<div class="sub_content_row_center">
+							<div style="flex:2 1 60%">
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,2,3|4|5,6|10|11-14|1-15">							
+								# program
+								full_adder = (
+									Qinit(3)
+									+ Qcycle(mapping=half_adder, boundary="open")
+									+ Qpivot(global_pattern="1*", merge_within="11"
+												,mapping=or_top)
+								)
+								addition = (
+									Qinit(n)
+									+ Qpivot("*1", "11", mapping=half_adder)
+									+ Qcycle(step=2,
+											 edge_order=[-1],
+											 mapping=full_adder,
+											 boundary="open")
+								)
+								</code>
+							</pre>
+							</div>
+							<div style="flex: 1 1 40%">
+								<img  src="./img/classical_add.svg" />
+							</div>
 							
-							def or_top(bits, symbols=None, state=None):
-								b1, b2 = state[bits[0]], state[bits[1]]
-								state[bits[0]] = b1 or b2
-								return state				
-							</code>
-						</pre>
+
+
+						</div>
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				<section class="flex-container">
-					<div class="header">
-						<h4>Classical Adder</h4>
-						<hr />
-					</div>
-					<div class="content" style="flex-direction: column!important;">
-						<pre data-id="code-animation" style="font-size: .5em;">
-							<code class="hljs python" data-trim data-line-numbers style="padding-bottom: 0em!important;">							
-							# program
-							full_adder = (
-								Qinit(3)
-								+ Qcycle(mapping=Qunitary(half_adder, 0, 2), boundary="open")
-								+ Qpivot(global_pattern="1*", merge_within="11", mapping=Qunitary(or_top, 0, 2))
-							)
-							addition = (
-								Qinit([i for i in range(n)], state=[elem for pair in zip(x, y) for elem in pair])
-								+ Qpivot("*1", "11", mapping=Qunitary(half_adder, 0, 2))
-								+ Qcycle(step=2, edge_order=[-1], mapping=full_adder, boundary="open")
-							)
-							plot_circuit(addition)
-							</code>
-						</pre>
-
-						<img src="./img/classical_add.svg" />
-
-
-					</div>
-					<div class="footer" style="justify-content: center;">
-						https://github.com/matt-lourens/hierarqcal
-					</div>
-				</section>
+				
 			</section>
 		</div>
 	</div>
