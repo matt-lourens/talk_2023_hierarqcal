@@ -107,6 +107,13 @@ Quantum circuit algorithms often require architectural design choices analogous 
 			align-items: center;
 		}
 
+		.caption {
+			font-size: .6em;
+			width: 80%;
+			text-align: justify;
+			margin-top: 12px;
+		}
+
 		/* code {
 			padding-bottom: 0em !important;
 		} */
@@ -141,7 +148,20 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					</div>
 					<h3>Hierarchical Quantum Circuit Representations</h3>
 				</div>
-				<div class="footer"></div>
+				<div class="footer">
+					<div class="sub_content_row_center" style="justify-content: space-around;">
+						<div class="sub_content_column" style="flex: 0 1 15%;justify-content: center;">
+							<img src="./img/SUN_logo.png"  />
+						</div>
+						<div class="sub_content_column" style="flex: 0 1 20%;justify-content: center;">
+							<img src="./img/omt_logo.svg" />
+						</div>
+						<div class="sub_content_column" style="flex: 0 1 15%;justify-content: center;">
+							<img src="./img/unitary_logo.svg" />
+						</div>	
+					</div>
+
+				</div>
 			</section>
 			<section class="flex-container" data-auto-animate data-auto-animate-duration=".4">
 				<div class="header"></div>
@@ -154,7 +174,20 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					</div>
 					<h3>Hierarchical Quantum Circuit Representations</h3>
 				</div>
-				<div class="footer"></div>
+				<div class="footer">
+					<div class="sub_content_row_center" style="justify-content: space-around;">
+						<div class="sub_content_column" style="flex: 0 1 15%;justify-content: center;">
+							<img src="./img/SUN_logo.png"  />
+						</div>
+						<div class="sub_content_column" style="flex: 0 1 20%;justify-content: center;">
+							<img src="./img/omt_logo.svg" />
+						</div>
+						<div class="sub_content_column" style="flex: 0 1 15%;justify-content: center;">
+							<img src="./img/unitary_logo.svg" />
+						</div>	
+					</div>
+
+				</div>
 			</section>
 			<section>
 				<section>
@@ -199,38 +232,111 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					</div>
 				</section>
 
-				<section class="flex-container" data-auto-animate>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0">
 					<div class="header">
 						<h4>Automation</h4>
-						<hr />
+						<hr data-id="hr" />
 					</div>
 					<div class="content">
-						<img src="./img/manual_feature.png" width="45%" />
-						<div class="fragment" style="display: flex;flex-direction: column;">
-							$\rightarrow$
-							<span>Feature Engineering</span>
+						<div class="sub_content_row_center">
+							<div>
+								<span data-id="manual" class="fragment" data-fragment-index="1">Manual</span>
+								<img src="./img/manual_feature.png" />
+							</div>
+							<div class="fragment sub_content_column_center" data-fragment-index="1"
+								style="justify-content: center;">
+								$\rightarrow$
+								<span>Feature Engineering</span>
+							</div>
+							<div class="fragment" data-fragment-index="1" data-id="auto">
+								<span data-id="auto">Automated</span>
+								<img src="./img/automate_feature.png" />
+							</div>
 						</div>
-						<img class="fragment" src="./img/automate_feature.png" width="45%" />
 					</div>
-					<div class="footer" style="justify-content: center;">
+					<div class="footer" style="justify-content: center;" data-id="footer">
+						Images Generated with DALL·E 3
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0.5">
+					<div class="header">
+						<h4>Automation</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_row_center">
+							<div style="margin-right: 10px;">
+								<span data-id="manual">Manual</span>
+								<img src="./img/manual_feature.png" />
+							</div>
+							<div class="sub_content_column_center" style="justify-content: center;">
+								$\rightarrow$
+								<span>Architecture Engineering?</span>
+							</div>
+							<div style="margin-left: 10px;">
+								<span data-id="auto">Automated</span>
+								<img src="./img/automate_feature.png" />
+							</div>
+						</div>
+					</div>
+					<div class="footer" style="justify-content: center;" data-id="footer">
 						Images Generated with DALL·E 3
 					</div>
 				</section>
 				<section class="flex-container" data-auto-animate>
 					<div class="header">
-						<h4>Automation</h4>
-						<hr />
+						<h4>Neural Architecture Search</h4>
+						<hr data-id="hr" />
 					</div>
 					<div class="content">
-						<img src="./img/manual_feature.png" width="45%" />
-						<div style="display: flex;flex-direction: column;">
-							$\rightarrow$
-							<span>Architecture Engineering?</span>
+						<div class="fragment sub_content_column_center" style="justify-content: center;"
+							data-fragment-index="1">
+							<img src="./img/nas.png" />
+							<div class="caption">
+								<span><b>$^*$Fig:</b> Abstract illustration of Neural Architecture Search methods. A
+									search
+									strategy selects an architecture A from a predefined search space A. The
+									architecture is passed to a performance estimation strategy, which returns the
+									estimated performance of A to the search strategy.</span>
+							</div>
+
 						</div>
-						<img src="./img/automate_feature.png" width="45%" />
+
+						<!-- Figure 1: Abstract illustration of Neural Architecture Search methods. A search strategy selects an architecture A from a predefined search space A. The architecture is passed to a performance estimation strategy, which returns the estimated performance of A to the search strategy. -->
 					</div>
-					<div class="footer" style="justify-content: center;">
-						Images Generated with DALL·E 3
+					<div data-id="footer" class="footer fragment" style="justify-content: center;"
+						data-fragment-index="1">
+						<span>$^*$Elsken, T., Metzen, J. H. & Hutter, F. Neural architecture search: a survey. J. Mach.
+							Learn. Res. 20, 1-21 (2019).</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate>
+					<div class="header">
+						<h4>Neural Architecture Search</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_row_center">
+							<div class="sub_content_column_center" style="flex: 2 1 20%">
+								<img src="./img/cell_nas.png" width="80%" />
+							</div>
+							<div class="caption" style="flex: 1 2 15%">
+								<span><b>$^*$Fig:</b> An illustration of different architecture spaces. Each node
+									in the graphs corresponds to a layer in a neural network, e.g., a convolutional or
+									pooling layer. Different layer types are visualized by different colors. An edge
+									from layer $L_i$ to layer $L_j$ denotes that $L_j$ receives the output of $L_i$ as
+									input. Left: an element of a chain-structured space. Right: an element of a more
+									complex search space with additional layer types and multiple branches and skip
+									connections.</span>
+							</div>
+
+						</div>
+
+						<!-- Figure 2: An illustration of different architecture spaces. Each node in the graphs corresponds to a layer in a neural network, e.g., a convolutional or pooling layer. Different layer types are visualized by different colors. An edge from layer Li to layer Lj denotes that Lj receives the output of Li as input. Left: an element of a chain-structured space. Right: an element of a more complex search space with additional layer types and multiple branches and skip connections. -->
+					</div>
+					<div data-id="footer" class="footer" style="justify-content: center;">
+						<span>$^*$Elsken, T., Metzen, J. H. & Hutter, F. Neural architecture search: a survey. J. Mach.
+							Learn. Res. 20, 1-21 (2019).</span>
 					</div>
 				</section>
 				<section class="flex-container" data-auto-animate>
@@ -240,42 +346,26 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					</div>
 					<div class="content">
 						<div class="sub_content_column_center">
-							<img src="./img/nas.png" />
+							<div class="sub_content_column_center" style="flex: 2 1 50%;">
+								<img src="./img/liu_nas.png" />
+							</div>
+
+							<div class="caption" style="flex: 1 2 30%;">
+								<span><b>$^*$Fig:</b> An example of a three-level hierarchical architecture
+									representation. The bottom row shows how level-1 primitive operations $o^{(1)}_1$ ,
+									$o^{(1)}_2$ , $o^{(1)}_3$ are assembled into a level-2 motif $o^{(2)}_1$ . The top
+									row shows how level-2 motifs $o^{(2)}_1$ , $o^{(2)}_2$ , $o^{(2)}_3$ are then
+									assembled into a level-3 motif $o^{(3)}_1$.</span>
+							</div>
 						</div>
 
-						<!-- Figure 1: Abstract illustration of Neural Architecture Search methods. A search strategy selects an architecture A from a predefined search space A. The architecture is passed to a performance estimation strategy, which returns the estimated performance of A to the search strategy. -->
-					</div>
-					<div data-id="footer" class="footer" style="justify-content: center;">
-						Elsken, T., Metzen, J. H. & Hutter, F. Neural architecture search: a survey. J. Mach. Learn.
-						Res. 20, 1-21 (2019).
-					</div>
-				</section>
-				<section class="flex-container" data-auto-animate>
-					<div class="header">
-						<h4>Neural Architecture Search</h4>
-						<hr data-id="hr" />
-					</div>
-					<div class="content">
-						<img src="./img/cell_nas.png" width="50%" />
-						<!-- Figure 2: An illustration of different architecture spaces. Each node in the graphs corresponds to a layer in a neural network, e.g., a convolutional or pooling layer. Different layer types are visualized by different colors. An edge from layer Li to layer Lj denotes that Lj receives the output of Li as input. Left: an element of a chain-structured space. Right: an element of a more complex search space with additional layer types and multiple branches and skip connections. -->
-					</div>
-					<div data-id="footer" class="footer" style="justify-content: center;">
-						Elsken, T., Metzen, J. H. & Hutter, F. Neural architecture search: a survey. J. Mach. Learn.
-						Res. 20, 1-21 (2019).
-					</div>
-				</section>
-				<section class="flex-container" data-auto-animate>
-					<div class="header">
-						<h4>Neural Architecture Search</h4>
-						<hr data-id="hr" />
-					</div>
-					<div class="content">
-						<img src="./img/liu_nas.png" width="100%" />
+
 
 					</div>
 					<div class="footer" style="justify-content: center;">
-						Liu, H., Simonyan, K., Vinyals, O., Fernando, C. & Kavukcuoglu, K. Hierarchical representations
-						for efficient architecture search. Int. Conf. Learn. Represent. (2018).
+						<span>$^*$Liu, H., Simonyan, K., Vinyals, O., Fernando, C. & Kavukcuoglu, K. Hierarchical
+							representations for efficient architecture search. Int. Conf. Learn. Represent.
+							(2018).</span>
 					</div>
 				</section>
 				<section>
@@ -287,10 +377,24 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<hr />
 					</div>
 					<div class="content">
-						<img src="./img/grant_circ.png" width="45%" />
+						<div class="sub_content_row_center">
+							<div class="sub_content_column_center" style="flex: 2 1 10%;">
+								<img src="./img/grant_circ.png" width="70%" />
+							</div>
+							<div class="caption" style="flex: 1 2 10%;">
+								<span><b>$^*$Fig:</b> TTN and MERA classifiers for eight qubits. The quantum circuit is
+									illustrated by the regions outlined in solid lines comprising inputs $\psi$, unitary
+									blocks $\{U_i\}_{i=1}^7$ and $\{D_i\}_{i=1}^4$, and a measurement operator M. The
+									dashed lines represent its conjugate transpose. The solid and dashed regions
+									together describe a tensor network operating on input $\psi_{1-8}$ and evaluating to
+									the expectation value of observable $M$</span>
+							</div>
+						</div>
+
 					</div>
 					<div class="footer" style="justify-content: center;">
-						Grant, E. et al. Hierarchical quantum classifiers. NPJ Quantum Inf. 4, 65 (2018).
+						<span>$^*$Grant, E. et al. Hierarchical quantum classifiers. NPJ Quantum Inf. 4, 65
+							(2018).</span>
 					</div>
 				</section>
 
@@ -300,21 +404,52 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<hr />
 					</div>
 					<div class="content">
-						<img src="./img/cong_qcnn.png" width="45%" />
+						<div class="sub_content_row_center">
+							<div class="sub_content_column_center" style="flex: 2 1 10%;">
+								<img src="./img/cong_qcnn.png" width="70%" />
+							</div>
+							<div class="caption" style="flex: 1 2 10%;">
+								<span><b>$^*$Fig:</b> The concept of QCNNs. $a$, Simplified illustration of classical
+									CNNs. A sequence of image-processing layers transforms an input image into a series
+									of feature maps (blue rectangles) and finally into an output probability
+									distribution (purple bars). C, convolution; P, pooling; FC, fully connected. $b$,
+									QCNNs inherit a similar layered structure. Boxes represent unitary gates or
+									measurement with feed-forwarding. c, The QCNN and the MerA share the same circuit
+									structure, but run in reverse directions.
+								</span>
+							</div>
+						</div>
+
 					</div>
 					<div class="footer" style="justify-content: center;">
-						Cong, I., Choi, S. & Lukin, M. D. Quantum convolutional neural networks. Nat. Phys. 15,
-						1273-1278 (2019).
+						<span>$^*$Cong, I., Choi, S. & Lukin, M. D. Quantum convolutional neural networks. Nat. Phys.
+							15,
+							1273-1278 (2019).</span>
+						<span>Image of cat: https://www.pexels.com/photo/grey-and-white-short-furcat-104827/.</span>
 					</div>
 				</section>
 				<section class="flex-container">
 					<div class="header">
-						<h4>Ansatz Design</h4>
+						<h4>Compute Graph Design</h4>
 						<hr />
 					</div>
 					<div class="content">
-						We need a computer to design these compute graphs, start with quantum circuits, generalize
-						$\rightarrow$ synthesis
+						<div style="flex: 1 1 40%">
+
+							<div class="sub_content_column" style="font-size: .9em;justify-content: flex-start;">
+								<span style="text-align: left;">Program Synthesis</span>
+								<ul style="font-size: .9em;padding-left: 12px;padding-top: 12px;">
+									<li class="fragment">Neural Networks</li>
+									<li class="fragment">Tensor Networks</li>
+									<li class="fragment">Quantum Circuits</li>
+									<li class="fragment">Classical Circuits</li>
+								</ul>
+							</div>
+
+						</div>
+						<div style="flex: 2 1 40%">
+							<img class="fragment" src="./img/graph_synthesis.png" data-fragment-index="2" />
+						</div>
 					</div>
 					<div class="footer" style="justify-content: center;">
 					</div>
@@ -991,6 +1126,8 @@ Quantum circuit algorithms often require architectural design choices analogous 
 							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
 				</section>
+
+
 				<section class="flex-container">
 					<div class="header">
 						<h4>Music Genre Classification</h4>
@@ -999,12 +1136,25 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					<div class="content">
 						<div class="sub_content_column">
 							<div class="sub_content_row_center" style="justify-content: space-between;">
-								<img src="./img/arcvanz.svg" width="30%"></img>
-								<img src="./img/TABLE 1_p.svg" width="65%"></img>
+								<div class="sub_content_column" style="flex: 1 2 25%;">
+									<img src="./img/arcvanz.svg"></img>
+								</div>
+								<div class="sub_content_column fragment" style="flex: 2 0 45%;">
+									<img src="./img/TABLE 1_p.svg"></img>
+								</div>
 
 							</div>
-							<div class="sub_content_column_center">
-								<img src="./img/circ_anz.svg" width="50%"></img>
+							<div class="sub_content_row_center" style="justify-content: space-between;">
+								<div class="sub_content_column_center fragment" style="flex: 1 1 20%">
+									<span style="font-size: .5em;"><u>$^*$Reference Architecture:</u></span>
+									<img src="./img/hur_qcnn.png" width="70%" />
+								</div>
+								<div class="sub_content_column_center fragment" style="flex: 1 1 20%">
+									<span style="font-size: .5em;"><u>Ansatz:</u></span>
+									<img src="./img/circ_anz.svg" width="80%"></img>
+								</div>
+
+
 							</div>
 						</div>
 
@@ -1012,6 +1162,8 @@ Quantum circuit algorithms often require architectural design choices analogous 
 					<div class="footer">
 						<span>Lourens, M., Sinayskiy, I., Park, D.K. et al. Hierarchical quantum circuit
 							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
+						<span>$^*$Hur, T., Kim, L. & Park, D. K. Quantum convolutional neural network for classical data
+							classification. Quantum Mach. Intell. 4, 3 (2022).</span>
 					</div>
 				</section>
 			</section>
@@ -2124,18 +2276,27 @@ Quantum circuit algorithms often require architectural design choices analogous 
 							</pre>
 							</div>
 							<div style="flex: 1 1 40%">
-								<img  src="./img/classical_add.svg" />
+								<img src="./img/classical_add.svg" />
 							</div>
-							
-
-
 						</div>
 					</div>
 					<div class="footer">
 						https://github.com/matt-lourens/hierarqcal
 					</div>
 				</section>
-				
+
+			</section>
+			<section>
+				<div class="content" style="justify-content: space-between;">
+					<div class="sub_content_column_center" style="flex: 0 1 80%">
+						<span>Paper</span>
+						<img src="./img/qr-code-paper.svg" width="70%"/>
+					</div>
+					<div class="sub_content_column_center" style="flex: 0 1 80%">
+						<span>Package</span>
+						<img src="./img/qr-code-hierarqcal.svg" width="70%" />
+					</div>
+				</div>
 			</section>
 		</div>
 	</div>

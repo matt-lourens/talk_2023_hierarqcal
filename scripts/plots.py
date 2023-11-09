@@ -228,8 +228,19 @@ fig.savefig(f"./img/{name}_circuit.svg", transparent=True, bbox_inches="tight")
 
 # ===== Demo =====
 name = "demo_right"
-nq = 3
-hierq = Qinit(2**nq) + (Qcycle(mapping=u2) + Qmask("!*", mapping=v2)) * nq
+strides = range(1, 8, 1)
+steps = range(1, 8, 1)
+mappings = [a, b, c, d, e, f, g, h]
+boundaries = ["open", "periodic"]
+patterns = ["10", "01", "*!", "!*", "!*!", "*!*"]
+hierq = (
+    Qinit(8)
+    + (
+        Qcycle(np.random.choice(strides),np.random.choice(steps), mapping=np.random.choice(mappings))
+        + Qmask("!*", mapping=np.random.choice(mappings))
+    )
+    * 3
+)
 circuit = get_circuit(hierq)
 fig = draw_circuit(circuit, style={"backgroundcolor": "none"})
 fig.savefig(f"./img/{name}.svg", transparent=True, bbox_inches="tight")
