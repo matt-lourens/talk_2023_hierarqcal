@@ -1336,6 +1336,114 @@ Quantum circuit algorithms often require architectural design choices analogous 
 							representations for neural architecture search. npj Quantum Inf 9, 79 (2023).</span>
 					</div>
 				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0"> <!-- qcnn 4-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="1,5">								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/demo_qcnn4_circuit.svg"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span data-id="foot_span">https://github.com/matt-lourens/hierarqcal</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0"> <!-- qcnn 5-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="2,5">
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/demo_qcnn5_circuit.svg"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span data-id="foot_span">https://github.com/matt-lourens/hierarqcal</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0"> <!-- qcnn 6-->
+					<div class="header">
+						<h4>Examples</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="3,5">
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/demo_qcnn6_circuit.svg"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span data-id="foot_span">https://github.com/matt-lourens/hierarqcal</span>
+					</div>
+				</section>
+				<section class="flex-container" data-auto-animate data-auto-animate-duration="0"> <!-- qcnn 7-->
+					<div class="header">
+						<h4>Search space</h4>
+						<hr data-id="hr" />
+					</div>
+					<div class="content">
+						<div class="sub_content_column">
+							<div>
+								<pre data-id="code-animation" style="font-size: .5em;">
+								<code class="hljs python" data-trim data-line-numbers="4,5">
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!", mapping=v2)								
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("!*!", mapping=v2)
+									cycle_mask = Qcycle(1, 1, 0, mapping=u2) + Qmask("*!*", mapping=v2)									
+									hierq = Qinit(8) + cycle_mask * 3
+								</code>
+							</pre>
+							</div>
+							<div class="sub_content_column_center">
+								<img data-id="img" src="./img/demo_qcnn7_circuit.svg"></img>
+							</div>
+						</div>
+					</div>
+					<div class="footer" data-id="foot">
+						<span data-id="foot_span">https://github.com/matt-lourens/hierarqcal</span>
+					</div>
+				</section>
 
 
 
