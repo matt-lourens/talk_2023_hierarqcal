@@ -213,13 +213,13 @@ Quantum circuit algorithms often require architectural design choices analogous 
 									Representations</span>
 							</div>
 						</div>
-						<div class="sub_content_row_center">
+						<div class="sub_content_row_center" style="padding-top: 20px;">
 							<span style="font-size: .8em;flex: 1 1 50%">Design and implement hierarchical compute
 								graphs</span>
 							<span style="font-size: .8em;flex: 1 1 50%">Theoretical framework behind package</span>
 
 						</div>
-						<div class="sub_content_column_center" style="flex: 1 0 auto; padding-top: 50px;">
+						<div class="sub_content_column_center" style="flex: 1 0 auto; padding-top: 120px;">
 							<span>This talk</span>
 							<ul style="font-size: .9em;padding-left: 12px;padding-top: 12px;">
 								<li>Background</li>
@@ -1063,9 +1063,9 @@ Quantum circuit algorithms often require architectural design choices analogous 
 						<div class="sub_content_column">
 							<div>
 								<pre data-id="code-animation" style="font-size: .5em;">
-								<code class="hljs python" data-trim data-line-numbers="2">
-									hierq = Qinit(8) + Qmask("1*")
+								<code class="hljs python" data-trim data-line-numbers="2">									
 									hierq = Qinit(8) + Qmask("!00")
+									hierq = Qinit(8) + Qmask("!*")
 									hierq = Qinit(8) + Qcycle(mapping = u2) + Qmask("*!") + Qcycle(mapping = u2)
 								</code>
 							</pre>
